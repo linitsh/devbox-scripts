@@ -5,3 +5,5 @@ curl -fsSL https://get.jetify.com/devbox | bash -s -- -f
 echo 'eval "$(devbox global shellenv)"' >> ~/.bashrc
 eval "$(devbox global shellenv --recompute)"
 echo "alias dbg='devbox global'" >> ~/.bashrc
+echo "alias db='devbox'" >> ~/.bashrc
+source ~/.bashrc
