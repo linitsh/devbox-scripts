@@ -15,5 +15,5 @@ apt-get install fuse-overlayfs -y
 apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 sed -i 's/ulimit -Hn/# ulimit -n/g' /etc/init.d/docker
 
-echo "run: 'service docker start' for run docker daemot"
+echo "run: 'service docker start' for run docker daemoт"
 
