@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
+version: '3'
+
+tasks:
+  push:
+  - git add .
+  - git commit -m "Update"
+  - git push
