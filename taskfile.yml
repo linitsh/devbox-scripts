@@ -1,10 +1,13 @@
 # yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
 version: '3'
+env:
+  # can be replace crossplatform issue
+  bash: C:\PROGRA~1\Git\bin\bash.exe --login -c --
 tasks:
   push:
   - git add .
   - git commit -m "{{if .CLI_ARGS}}{{.CLI_ARGS}}{{else}}Updated{{end}}"
   - git push
-  test-bash: bash -ic "$(curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/bash/test/test.sh)" -- -u aa -a 444
-  test-bash2: bash -ic 'node -v'
+  test-bash: bash -c "$(curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/bash/test/test.sh)" -- -u aa -a 444
+  test-bash2: bash -c 'node -v'
   test-node: node -e "$(curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/node/test/test.mjs)" -- agr1 arg2 arg3
