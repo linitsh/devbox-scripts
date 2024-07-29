@@ -3,3 +3,13 @@ version: '3'
 
 includes:
   test: https://raw.githubusercontent.com/linitsh/scripts/main/tasks/test/test.yml
+
+tasks:
+  set-git-bash:
+  - Remove-Item alias:bash
+  - Set-Alias -Name bash -Value "C:\Program Files\Git\bin\bash.exe"
+  set-curl:
+  - scoop update
+  - scoop install curl
+  - Remove-Item alias:curl
+  - Set-Alias -Name curl -Value C:\Users\LIN\scoop\apps\curl\current\bin\curl.exe
