@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
+version: '3'
+env:
+  bash: C:\PROGRA~1\Git\bin\bash.exe --login -c --
+  get : curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main
+tasks:
+
+  bash:
+    internal: true
+    cmds: 
+    - $bash "$( $get/bash/test/test.sh )" -- -u name -a 33
+  bash-node: 
+    internal: true
+    cmds: 
+    - $bash 'node -v'
+  node: 
+    internal: true
+    cmds: 
+    - node -e "$( $get/node/test/test.mjs )" -- agr1 arg2 arg3

@@ -3,11 +3,22 @@ version: '3'
 env:
   # can be replace crossplatform issue
   bash: C:\PROGRA~1\Git\bin\bash.exe --login -c --
+  get : curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main
+
+includes:
+  test: ./test.tasks.yml 
+
 tasks:
+  default: task --list-all
+  
   push:
   - git add .
   - git commit -m "{{if .CLI_ARGS}}{{.CLI_ARGS}}{{else}}Updated{{end}}"
   - git push
-  test-bash: bash -c "$(curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/bash/test/test.sh)" -- -u aa -a 444
-  test-bash2: bash -c 'node -v'
-  test-node: node -e "$(curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/node/test/test.mjs)" -- agr1 arg2 arg3
+
+  test:
+    - task: test:bash
+    - task: test:bash-node
+    - task: test:node
+
+  get: $bash "$( $get/bash/test/test.sh )" -- -u name -a 33

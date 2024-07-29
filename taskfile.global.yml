@@ -1,5 +1,8 @@
 # yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
 version: '3'
+env:
+  # can be replace crossplatform issue
+  bash: C:\PROGRA~1\Git\bin\bash.exe --login -c --
 
 includes:
   # task test:hello -- arg1
