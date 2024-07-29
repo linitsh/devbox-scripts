@@ -6,5 +6,6 @@ tasks:
   - git add .
   - git commit -m "Update"
   - git push
-
-    
+  test-bash: bash -ic "$(curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/bash/test/test.sh)" -- -u aa -a 444
+  test-bash2: bash -ic 'node -v'
+  test-node: node -e "$(curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/node/test.mjs)"

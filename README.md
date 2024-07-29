@@ -1,5 +1,5 @@
 
-- [taskfile docs](https://taskfile.dev/experiments/remote-taskfiles/)
+>[taskfile docs](https://taskfile.dev/experiments/remote-taskfiles/)
 
 ### vscode-validation
 ```yml
@@ -8,28 +8,25 @@ version: '3'
 tasks:
   task1: echo " :) "
 ```
+### make task crossplatform
+windows
+- change system path variable - git bash folder must be before System32
+- same for scoop
+- reload all
+- now use: 
+  ```powershell
+  bash -ic "command" -- arg1 arg2
+  ```
 
 ### run remote scripts
-```bash
-#!/bin/bash
-# bash flag "-s" makes shell read from stdin.
-curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/bash/test/test.sh | bash -s -- -u 'Jon Doe' -a 25
+```powershell
+scoop install curl
 ```
 ```powershell
-# powershellrun from win wsl
-bash --login -ic "curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/bash/test/test.sh | bash -s -- -u 'Jon Doe' -a 25"
-# fix win curl
-# 0 scoop install curl
-# 1 Remove-Item alias:curl
-# 2 Set-Alias -Name curl -Value C:\Users\LIN\scoop\apps\curl\current\bin\curl.exe
-# now curl is indentical
-curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/bash/test/test.sh | bash -s -- -u 'Jon Doe' -a 25
-
-#node gitabsh
-node -e "$(curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/node/test.mjs)"
+# bash script
+bash -ic "$(curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/bash/test/test.sh)" -- -u 'my name' -a 30
 ```
-```bash
-
-# yaml
-tasks test:hello -- arg1
+```powershell
+# node script
+node -e "$(curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/node/test/test.mjs)"
 ```
