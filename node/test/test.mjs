@@ -1,3 +1,3 @@
-const args = process.argv.slice(2);
+const args = process.argv;
 console.log(args);
 console.log(`Hello from the remote Taskfile!`);
