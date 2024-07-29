@@ -1,6 +1,11 @@
 
 >[taskfile docs](https://taskfile.dev/experiments/remote-taskfiles/)
 
+### install
+```powershell
+scoop install task
+```
+
 ### vscode-validation
 ```yml
 # yaml-language-server: $schema=https://json.schemastore.org/taskfile.json

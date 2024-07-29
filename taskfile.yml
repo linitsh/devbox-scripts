@@ -3,8 +3,8 @@ version: '3'
 tasks:
   push:
   - git add .
-  - git commit -m "Update"
+  - git commit -m "{{if .CLI_ARGS}}{{.CLI_ARGS}}{{else}}Updated{{end}}"
   - git push
   test-bash: bash -ic "$(curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/bash/test/test.sh)" -- -u aa -a 444
   test-bash2: bash -ic 'node -v'
-  test-node: node -e "$(curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/node/test/test.mjs)" -- agr1 arg2
+  test-node: node -e "$(curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/node/test/test.mjs)" -- agr1 arg2 arg3

@@ -2,4 +2,5 @@
 version: '3'
 
 includes:
+  # task test:hello arg1
   test: https://raw.githubusercontent.com/linitsh/scripts/main/tasks/test/test.yml
