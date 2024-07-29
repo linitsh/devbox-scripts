@@ -14,5 +14,9 @@ tasks:
 ```bash
 #!/bin/bash
 #Flag "-s" makes shell read from stdin.
-curl -s https://raw.githubusercontent.com/linitsh/scripts/main/bash/test/test.sh | bash -s arg1 arg2
+curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/bash/test/test.sh | bash -s -- -u 'John Smith' -a 25
+```
+```powershell
+# run from win wsl
+bash --login -ic "curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/bash/test/test.sh | bash -s -- -u name -a 44" 
 ```
