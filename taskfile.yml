@@ -1,6 +1,5 @@
 # yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
 version: '3'
-
 tasks:
   push:
   - git add .
@@ -8,4 +7,4 @@ tasks:
   - git push
   test-bash: bash -ic "$(curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/bash/test/test.sh)" -- -u aa -a 444
   test-bash2: bash -ic 'node -v'
-  test-node: node -e "$(curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/node/test.mjs)"
+  test-node: node -e "$(curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/node/test/test.mjs)" -- agr1 arg2
