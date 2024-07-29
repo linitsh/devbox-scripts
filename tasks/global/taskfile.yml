@@ -6,10 +6,10 @@ includes:
 
 tasks:
   set-git-bash:
-  - Remove-Item alias:bash
+  - Remove-Alias -Name bash
   - Set-Alias -Name bash -Value "C:\Program Files\Git\bin\bash.exe"
   set-curl:
   - scoop update
   - scoop install curl
-  - Remove-Item alias:curl
+  - Remove-Alias -Name curl
   - Set-Alias -Name curl -Value C:\Users\LIN\scoop\apps\curl\current\bin\curl.exe
