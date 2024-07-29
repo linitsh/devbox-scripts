@@ -1,1 +1,1 @@
-console.log(`Hello from the remote Taskfile! args: ${process.argv.slice(1).join(' ')}`);
+console.log(`Hello from the remote Taskfile! args: ${process.argv}`);
