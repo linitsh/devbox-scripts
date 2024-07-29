@@ -14,5 +14,5 @@ tasks:
 ```bash
 #!/bin/bash
 #Flag "-s" makes shell read from stdin.
-curl -s http://server/path/script.sh | bash -s arg1 arg2
+curl -s https://raw.githubusercontent.com/linitsh/scripts/main/bash/test/test.sh | bash -s arg1 arg2
 ```
