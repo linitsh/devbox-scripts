@@ -2,7 +2,7 @@
 version: '3'
 
 tasks:
-  default   : wsl --help
+  default   : echo "https://github.com/linitsh/scripts/blob/main/remote/tasks/wsl/taskfile.yml"
   list      : wsl --list --online
   install   : wsl --install -d Ubuntu
   uninstall : wsl --unregister Ubuntu
