@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
+version: '3'
+
+tasks:
+  default   : wsl --help
+  list      : wsl --list --online
+  install   : wsl --install -d Ubuntu
+  uninstall : wsl --unregister Ubuntu
+  set       : wsl --set-default Ubuntu
+  shutdown  : wsl --shutdown
+  login     : wsl --user root 
+
+  create-root:
+    silent : true
+    desc   : "create root user example"
+    cmds   : 
+    - echo "wsl --set-default Ubuntu"
+    - echo "wsl --user root"
+    - echo "passwd root"
+    - echo "exit"
+    - echo "wsl"

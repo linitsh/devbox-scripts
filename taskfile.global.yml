@@ -7,3 +7,4 @@ env:
 includes:
   # task test:hello -- arg1
   test: https://raw.githubusercontent.com/linitsh/scripts/main/remote/tasks/test/test.yml
+  wsl: https://raw.githubusercontent.com/linitsh/scripts/main/remote/tasks/wsl/taskfile.yml
