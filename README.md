@@ -29,9 +29,9 @@ scoop install curl
 ```
 ```powershell
 # bash script
-bash -ic "$(curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/bash/test/test.sh)" -- -u 'my name' -a 30
+bash -ic "$(curl -Ls <URL>/test.sh)" -- -u 'my name' -a 30
 ```
 ```powershell
 # node script
-node -e "$(curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/node/test/test.mjs)"
+node --input-type=module -e "$(curl -Ls <URL>/test.mjs)" -- arg1 arg2
 ```

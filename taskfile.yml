@@ -4,6 +4,7 @@ env:
   # can be replace crossplatform issue
   bash: C:\PROGRA~1\Git\bin\bash.exe --login -c --
   get : curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/remote
+  node : node --input-type=module -e
 
 includes:
   test: ./test.tasks.yml 
@@ -21,4 +22,4 @@ tasks:
     - task: test:bash-node
     - task: test:node
 
-  get: $bash "$( $get/bash/test/test.sh )" -- -u name -a 33
+  get: $node "$( $get/node/npm/show.mjs )"

@@ -1,9 +1,8 @@
-
 import { execSync } from 'child_process'
 import fs from 'fs'
 const packageJson = JSON.parse(fs.readFileSync(`${process.cwd()}/package.json`))
-const dependencies = packageJson.dependencies
-const devDependencies = packageJson.devDependencies
+const dependencies = packageJson?.dependencies ?? {}
+const devDependencies = packageJson?.devDependencies ?? {}
 const result = {dependencies:{},devDependencies:{}}
 
 function listUpdate(dependencies){
