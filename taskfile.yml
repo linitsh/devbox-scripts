@@ -3,7 +3,7 @@ version: '3'
 env:
   # can be replace crossplatform issue
   bash: C:\PROGRA~1\Git\bin\bash.exe --login -c --
-  get : curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main
+  get : curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/remote
 
 includes:
   test: ./test.tasks.yml 

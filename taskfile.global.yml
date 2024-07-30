@@ -6,4 +6,4 @@ env:
 
 includes:
   # task test:hello -- arg1
-  test: https://raw.githubusercontent.com/linitsh/scripts/main/tasks/test/test.yml
+  test: https://raw.githubusercontent.com/linitsh/scripts/main/remote/tasks/test/test.yml

@@ -2,7 +2,7 @@
 version: '3'
 env:
   bash: C:\PROGRA~1\Git\bin\bash.exe --login -c --
-  get : curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main
+  get : curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/remote
 tasks:
 
   bash:
