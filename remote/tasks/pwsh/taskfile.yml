@@ -6,3 +6,4 @@ env:
 tasks:
   default: echo "powershell -command '<commmand>'"
   where: where.exe {{.CLI_ARGS}}
+  # $env:path.Split(';') | gci -Filter kubectl.exe

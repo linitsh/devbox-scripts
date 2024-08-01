@@ -25,4 +25,4 @@ tasks:
     - $node "$( $get/node/npm/show.mjs )"
 
   all:
-    - task: testy:hello
+  - task: testy:hello
