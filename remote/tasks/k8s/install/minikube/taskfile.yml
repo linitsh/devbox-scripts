@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
+version: '3'
+env:
+  bash: bash --login -c --
+
+includes:
+  minikube: ./taskfile.minikube.yml
+  helm: ./taskfile.helm.yml
+
+tasks:
+  default: task --list-all
+  
+  check:
+  - systeminfo
+
+  install:
+  - scoop update
+  - scoop list
+  - task: helm:install
+  - task: minikube:install
+  - task: minikube:run
+  - task: minikube:ingress-on
+
+  uninstall:
+  - scoop list
+  - scoop uninstall kubectl
+  - where.exe kubectl.exe
+  - where.exe minikube.exe
+  - task: helm:uninstall
+  - task: minikube:uninstall
+  - task: clear-directory
+
+  clear-directory:
+    prompt: This is a dangerous command... Do you want to continue?
+    internal: true
+    cmds:
+    - $bash 'rm -rf C:/Users/LIN/.vs-kubernetes'
+    - $bash 'rm -rf C:/Users/LIN/.kube'
+    - $bash 'rm -rf C:/Users/LIN/.minikube'
+

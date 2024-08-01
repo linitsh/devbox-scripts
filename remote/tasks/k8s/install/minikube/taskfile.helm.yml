@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
+version: '3'
+env:
+  pwsh: powershell -command
+
+tasks:
+  install:
+  - scoop update
+  - scoop install main/helm
+  - helm version
+  - scoop update helm
+  - task: win-completion
+
+  win-completion:
+  - $pwsh 'helm completion powershell | Out-String | Invoke-Expression'
+
+  uninstall:
+  - scoop uninstall main/helm

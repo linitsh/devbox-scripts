@@ -10,8 +10,19 @@ scoop install task
 ```yml
 # yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
 version: '3'
+env:
+  # can be replace crossplatform issue
+  bash: bash --login -c --
+  pwsh: powershell -command
+  get : curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/remote
+  node: node --input-type=module -e
+
+
+includes:
+  test: # path/test.tasks.yml 
+
 tasks:
-  task1: echo " :) "
+  default: task --list-all
 ```
 ### make task crossplatform
 windows

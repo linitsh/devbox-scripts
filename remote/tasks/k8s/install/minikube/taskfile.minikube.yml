@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
+version: '3'
+env:
+  profile: dev
+  
+tasks:
+
+  run:
+  - minikube start -p $profile
+  - minikube profile $profile
+  - minikube profile list
+  - kubectl config use-context $profile
+  - kubectl config get-contexts
+
+  stop:
+  - minikube stop -p $profile
+
+  set-profile-dev:
+  - minikube profile $profile
+
+  help-addons:
+  - minikube addons -h
+
+  # nginx-ingress in namespace
+  ingress-on:
+  - minikube addons list 
+  - minikube addons enable ingress
+
+  ingress-off:
+  - minikube addons disable ingress 
+  - minikube addons list 
+
+  install:
+  - scoop install main/minikube
+  - minikube version
+  - scoop update minikube
+
+  uninstall:
+  - task: ingress-off
+  - task: stop
+  - scoop uninstall main/minikube

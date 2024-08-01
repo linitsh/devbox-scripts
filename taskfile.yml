@@ -2,9 +2,11 @@
 version: '3'
 env:
   # can be replace crossplatform issue
-  bash: C:\PROGRA~1\Git\bin\bash.exe --login -c --
+  bash: bash --login -c --
+  # bash: C:\PROGRA~1\Git\bin\bash.exe --login -c --
+  pwsh: powershell -command
   get : curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/remote
-  node : node --input-type=module -e
+  node: node --input-type=module -e
 
 includes:
   test: ./test.tasks.yml 

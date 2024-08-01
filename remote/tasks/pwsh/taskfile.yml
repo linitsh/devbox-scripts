@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
+version: '3'
+env:
+  pwsh: powershell -command
+  
+tasks:
+  default: echo "powershell -command '<commmand>'"
+  where: where.exe {{.CLI_ARGS}}
