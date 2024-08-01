@@ -1,8 +1,11 @@
 # yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
 version: '3'
 env:
-  bash: C:\PROGRA~1\Git\bin\bash.exe --login -c --
+  bash: bash --login -c --
+  pwsh: powershell -command
   get : curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/remote
+  node: node --input-type=module -e
+  
 tasks:
 
   bash:
@@ -16,4 +19,4 @@ tasks:
   node: 
     internal: true
     cmds: 
-    - node -e "$( $get/node/test/test.mjs )" -- agr1 arg2 arg3
+    - $node "$( $get/node/test/test.mjs )" -- agr1 arg2 arg3

@@ -9,19 +9,28 @@ env:
   node: node --input-type=module -e
 
 includes:
-  test: ./test.tasks.yml 
-
+  test: 
+    taskfile: ./test.tasks.yml
+    internal: true 
+  env:
+    taskfile: ./remote/tasks/settings/taskfile.env.yml
+    internal: true
 tasks:
   default: task --list-all
   
   push:
   - git add .
-  - git commit -m "{{if .CLI_ARGS}}{{.CLI_ARGS}}{{else}}Updated{{end}}"
+  - git commit -m "{{ .CLI_ARGS | default "Updated" }}"
   - git push
 
   test:
+    internal: true
+    cmds:
     - task: test:bash
     - task: test:bash-node
     - task: test:node
 
-  get: $node "$( $get/node/npm/show.mjs )"
+  get:
+    internal: true
+    cmds: 
+    - $node "$( $get/node/npm/show.mjs )"
