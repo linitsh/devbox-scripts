@@ -2,6 +2,6 @@
 version: '3'
 includes:
   # task test:hello -- arg1
-  shared: https://raw.githubusercontent.com/linitsh/scripts/main/taskfile.shared.yml
+  shared: https://raw.githubusercontent.com/linitsh/scripts/main/shared.yml
   test: https://raw.githubusercontent.com/linitsh/scripts/main/remote/tasks/test/test.yml
   wsl: https://raw.githubusercontent.com/linitsh/scripts/main/remote/tasks/wsl/taskfile.yml

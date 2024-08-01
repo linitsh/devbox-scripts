@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
 version: '3'
 includes:
-  shared: https://raw.githubusercontent.com/linitsh/scripts/main/taskfile.shared.yml
-  test:  ./test.tasks.yml
+  shared: https://raw.githubusercontent.com/linitsh/scripts/main/shared.yml
+  testy : ./remote/tasks/test/test-shared.yml
 
 tasks:
   default: task --list-all
@@ -24,4 +24,5 @@ tasks:
     cmds: 
     - $node "$( $get/node/npm/show.mjs )"
 
-  all: echo $bash
+  all:
+    - task: testy:hello

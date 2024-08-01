@@ -22,20 +22,36 @@ windows
 - change system path variable - git bash folder must be before System32
 - same for scoop
 - reload all
-- now use: 
-  ```powershell
-  bash -ic "command" -- arg1 arg2
+- add remote env variable from docs
+- include shared.yml for use shell envs in your taskfile
+```yml
+includes:
+  shared: https://raw.githubusercontent.com/linitsh/scripts/main/taskfile.shared.yml
+  ```
+- now use shells like: 
+```yml
+tasks:
+  test-shared:
+  - $bash 'echo "some1"'
+  - $pwsh 'echo "some2"'
+  - $node 'console.log("some2")'
+  # see shell yml
   ```
 
 ### run remote scripts
 ```powershell
+# win
+# 1 add remote env variable from taskfile docs
+# 2 push up scoop env path 
 scoop install curl
 ```
 ```powershell
-# bash script
+# win
+# 1 push up gitbash env path
+# bash script simple
 bash -ic "$(curl -Ls <URL>/test.sh)" -- -u 'my name' -a 30
 ```
 ```powershell
-# node script
+# node script simpe
 node --input-type=module -e "$(curl -Ls <URL>/test.mjs)" -- arg1 arg2
 ```

@@ -1,8 +1,0 @@
-# yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
-version: '3'
-includes:
-  sub: https://raw.githubusercontent.com/linitsh/scripts/main/remote/tasks/test/subfolder/test.yml
-tasks:
-  hello: 
-    - echo "Hello from the remote test/Taskfile!"
-    - task: sub:hello

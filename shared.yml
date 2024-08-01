@@ -7,4 +7,7 @@ env:
   node: node --input-type=module -e
 
 tasks:
-  default: echo "https://raw.githubusercontent.com/linitsh/scripts/main/taskfile.shared.yml"
+  default: echo "https://raw.githubusercontent.com/linitsh/scripts/main/shared.yml"
+
+# includes:
+#   shared: https://raw.githubusercontent.com/linitsh/scripts/main/shared.yml
