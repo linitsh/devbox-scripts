@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
+version: '3'
+includes:
+  sub: ./subfolder/test.yml
+tasks:
+  hello: 
+    - echo "Hello from the remote test/Taskfile!"
+    - task: sub:hello

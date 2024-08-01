@@ -10,16 +10,9 @@ scoop install task
 ```yml
 # yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
 version: '3'
-env:
-  # can be replace crossplatform issue
-  bash: bash --login -c --
-  pwsh: powershell -command
-  get : curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/remote
-  node: node --input-type=module -e
-
-
 includes:
-  test: # path/test.tasks.yml 
+  # $bash '' $pwsh '' $node '' $get ''
+  shared: https://raw.githubusercontent.com/linitsh/scripts/main/taskfile.shared.yml
 
 tasks:
   default: task --list-all

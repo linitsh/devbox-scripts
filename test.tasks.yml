@@ -1,11 +1,8 @@
 # yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
 version: '3'
-env:
-  bash: bash --login -c --
-  pwsh: powershell -command
-  get : curl -Ls https://raw.githubusercontent.com/linitsh/scripts/main/remote
-  node: node --input-type=module -e
-  
+includes:
+  shared: https://raw.githubusercontent.com/linitsh/scripts/main/taskfile.shared.yml
+
 tasks:
 
   bash:

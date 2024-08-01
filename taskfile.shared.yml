@@ -7,4 +7,4 @@ env:
   node: node --input-type=module -e
 
 tasks:
-  default: echo "Hello from the remote Taskfile!"
+  default: echo "https://raw.githubusercontent.com/linitsh/scripts/main/taskfile.shared.yml"
