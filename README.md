@@ -1,3 +1,12 @@
+---
+title: tiele
+description: desc
+tags:
+  - gg
+categories:
+  - js
+slug: tiele
+---
 
 >[taskfile docs](https://taskfile.dev/experiments/remote-taskfiles/)
 
@@ -55,3 +64,4 @@ bash -ic "$(curl -Ls <URL>/test.sh)" -- -u 'my name' -a 30
 # node script simpe
 node --input-type=module -e "$(curl -Ls <URL>/test.mjs)" -- arg1 arg2
 ```
+[text](some.md)
