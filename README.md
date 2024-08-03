@@ -1,21 +1,16 @@
 ---
-title: tiele
-description: desc
-tags:
-  - gg
-categories:
-  - js
-slug: tiele
+title     : readme
+tags      : [tag1]
+categories: [yaml]
 ---
-
 >[taskfile docs](https://taskfile.dev/experiments/remote-taskfiles/)
 
 ### install
-```powershell
+```
 scoop install task
 ```
 
-### vscode-validation
+### vscode-validation top coment
 ```yml
 # yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
 version: '3'
@@ -36,7 +31,7 @@ windows
 ```yml
 includes:
   shared: https://raw.githubusercontent.com/linitsh/scripts/main/taskfile.shared.yml
-  ```
+```
 - now use shells like: 
 ```yml
 tasks:
@@ -45,7 +40,7 @@ tasks:
   - $pwsh 'echo "some2"'
   - $node 'console.log("some2")'
   # see shell yml
-  ```
+```
 
 ### run remote scripts
 ```powershell
@@ -64,6 +59,3 @@ bash -ic "$(curl -Ls <URL>/test.sh)" -- -u 'my name' -a 30
 # node script simpe
 node --input-type=module -e "$(curl -Ls <URL>/test.mjs)" -- arg1 arg2
 ```
-[text](some.md)
-
-https://github.com/linitsh/scripts/blob/0dcaef8fbc055f7345db7cc920e56a77c9a5bd7e/taskfile.yml#L1-L28
