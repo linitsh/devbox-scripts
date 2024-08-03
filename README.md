@@ -16,7 +16,7 @@ scoop install task
 version: '3'
 includes:
   # $bash '' $pwsh '' $node '' $get ''
-  shared: https://raw.githubusercontent.com/linitsh/scripts/main/taskfile.shared.yml
+  shared: https://raw.githubusercontent.com/linitsh/scripts/main/shared.yml
 
 tasks:
   default: task --list-all
