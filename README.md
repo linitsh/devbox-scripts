@@ -59,3 +59,8 @@ bash -ic "$(curl -Ls <URL>/test.sh)" -- -u 'my name' -a 30
 # node script simpe
 node --input-type=module -e "$(curl -Ls <URL>/test.mjs)" -- arg1 arg2
 ```
+
+### next block
+
+<mark style="background: #BBFABBA6;">okay</mark>
+
