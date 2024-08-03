@@ -65,3 +65,5 @@ bash -ic "$(curl -Ls <URL>/test.sh)" -- -u 'my name' -a 30
 node --input-type=module -e "$(curl -Ls <URL>/test.mjs)" -- arg1 arg2
 ```
 [text](some.md)
+
+https://github.com/linitsh/scripts/blob/0dcaef8fbc055f7345db7cc920e56a77c9a5bd7e/taskfile.yml#L1-L28
