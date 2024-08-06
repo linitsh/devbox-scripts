@@ -1,9 +1,0 @@
-# yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
-version: '3'
-
-includes:
-  shared: https://raw.githubusercontent.com/linitsh/scripts/main/shared.yml
-
-tasks:
-  default: echo 'https://raw.githubusercontent.com/linitsh/scripts/main/docker.yml'
-

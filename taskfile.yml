@@ -13,4 +13,4 @@ tasks:
   - git push
 
 
-  test: echo "$bash"
+  test: awk -h
