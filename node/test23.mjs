@@ -1,3 +1,3 @@
 export default async ctx =>{
-    console.log("test2")
+    console.log("test23")
 }
