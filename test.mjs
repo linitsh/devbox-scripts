@@ -7,6 +7,6 @@ async function load(url) {
   return result
 }
 const context = {enn:process.env,load}
-const module = await load("test12.mjs")
+const module = await load("test14.mjs")
 
 console.log(module(context))
