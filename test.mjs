@@ -1,11 +1,12 @@
-const url = 'https://raw.githubusercontent.com/linitsh/scripts/main/node/test1.mjs'
+
 async function load(url) {
-  const moduleContent = await fetch(url).then(response => response.text());
+  const path = `https://raw.githubusercontent.com/linitsh/scripts/main/node/${url}`
+  const moduleContent = await fetch(path).then(response => response.text());
   const module = await import(`data:text/javascript;charset=utf-8,${moduleContent}`);
   const result = module.default?module.default:module
   return result
 }
+const context = {enn:ProcessingInstruction.env,load}
+const module = await load("test11.mjs")
 
-const module = await load(url)
-
-console.log(module({env:'test'}))
+console.log(module(context))
