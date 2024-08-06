@@ -13,4 +13,4 @@ tasks:
   - git push
 
 
-  test: awk -h
+  test: node  ./test.mjs

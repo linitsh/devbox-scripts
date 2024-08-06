@@ -1,3 +1,5 @@
-export default ({env})=>{
-    console.log(2)
+export default ({env,load})=>{
+
+    console.log(process.env)
+    console.log(env)
 }
