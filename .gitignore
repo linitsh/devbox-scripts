@@ -2,3 +2,5 @@
 .vscode
 .obsidian
 templates
+node_modules
+package*.json

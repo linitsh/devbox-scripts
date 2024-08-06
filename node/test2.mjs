@@ -1,3 +1,3 @@
-export default ({env})=>{
+export default async ctx =>{
     console.log("test2")
 }
