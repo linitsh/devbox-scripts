@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=https://json.schemastore.org/taskfile.json
+version: '3'
+
+env:
+  ENV: some
+
+includes:
+  shared: https://raw.githubusercontent.com/linitsh/scripts/main/shared.yml
+
+tasks:
+  default: echo 'https://raw.githubusercontent.com/linitsh/scripts/main/node/bun/taskfile.yml'
+
+
+  install: scoop install main/bun
+  uninstall: scoop uninstall main/bun
