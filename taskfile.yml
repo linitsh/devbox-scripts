@@ -2,8 +2,6 @@
 version: '3'
 includes:
   shared: https://raw.githubusercontent.com/linitsh/scripts/main/shared.yml
-
-
 tasks:
   default: task --list-all
   
