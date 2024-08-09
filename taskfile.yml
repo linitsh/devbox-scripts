@@ -11,6 +11,3 @@ tasks:
   - git add .
   - git commit -m "{{ .CLI_ARGS | default "Updated" }}"
   - git push
-
-
-  test: node  ./test.mjs
