@@ -5,7 +5,7 @@ async function load(url) {
   moduleContent = await format(moduleContent, { semi: true, parser: "babel" })
   const module = await import(`data:text/javascript;charset=utf-8,${moduleContent}`);
   const result = module.default?module.default:module;
-  return result
+  return result;
 }
 
 
